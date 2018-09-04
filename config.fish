@@ -1,4 +1,6 @@
-set PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/ $PATH
+if test -e /usr/local/Caskroom/google-cloud-sdk
+    set PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/ $PATH
+end
 
 set fish_greeting ""
 # fish git prompt
