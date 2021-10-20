@@ -15,6 +15,12 @@ function gitwork
 	git config user.email "michael_crosby@homedepot.com"
 end
 
+function githome
+    git config user.name "microsby0"
+    git config user.email "microsby0@homedepot.com"
+end
+
+
 function sb
 	if test -e $argv
 		open -a "Sublime Text" $argv
