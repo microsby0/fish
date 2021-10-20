@@ -1,6 +1,22 @@
+set -x NVM_DIR ~/.nvm
+[ -s "NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 if test -e /usr/local/Caskroom/google-cloud-sdk
     set PATH /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin/ $PATH
 end
+
+set -x VAULT_ADDR https://vault.ioq1.homedepot.com:10365
+
+status is-login; and pyenv init --path | source
+pyenv init - | source
+
+# JENV
+set PATH $HOME/.jenv/bin $PATH
+#
+
+# Homebrew
+set PATH /usr/local/sbin $PATH
+#
 
 set fish_greeting ""
 # fish git prompt
@@ -25,3 +41,5 @@ function fish_prompt
         printf '%s ' (__fish_git_prompt )
         set_color normal
 end
+
+source ~/.config/fish/functions/all.fish
